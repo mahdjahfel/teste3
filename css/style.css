@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Reset margin, padding, and set background color for the body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Style for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: rgb(81, 81, 81);
+  
+}
+
+/* Style for the brand title in the navbar */
+.brand-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: .5rem;
+    padding-left: 5rem;
+}
+
+/* Style for images within the navbar */
+nav img {
+    width: auto;
+    height: 14px;
+}
+
+/* Style for the unordered list within the navbar */
+.navbar-links ul {
+    display: flex;
+    margin: 0 0rem;
+    padding: 0;
+}
+
+/* Remove list-style bullets for list items */
+.navbar-links li {
+    list-style: none;
+}
+
+/* Style for links within the navbar */
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #505050;
+    padding: 1rem;
+    margin:0 5rem;
+}
+
+/* Hover effect for links */
+.navbar-links li a:hover {
+    color: #00bbe2;
+}
+
+/* Style for the toggle button (for responsive design) */
+.toggle-button {
+    position: absolute;
+    top: .90rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 14px;
+}
+
+/* Style for the bars within the toggle button */
+.toggle-button .bar {
+    height: 2px;
+    width: 85%;
+    background-color: #505050;
+    border-radius: 10px;
+}
+
+/* Media query for screens with a maximum width of 800px */
+@media (max-width: 800px) {
+    /* Display the toggle button */
+    .toggle-button {
+        display: flex;
+    }
+
+    /* Hide the navbar links */
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    /* Change the flex direction and alignment of the navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Change the flex direction of the navbar links */
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    /* Adjust margin-bottom for the navbar */
+    .navbar-links {
+        margin-bottom: 3.4rem;
+    }
+
+    /* Modify the brand title styles */
+    .brand-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: .5rem;
+        padding-left: .5rem;
+    }
+
+    /* Style for links in the responsive navbar */
+    .navbar-links li a {
+        display: block;
+        text-decoration: none;
+        color: #505050;
+        margin:0 0rem;
+       
+    }
+
+    /* Adjust padding for links in the responsive navbar */
+    .navbar-links ul li a {
+        padding: 1rem;
+        
+    }
+
+    /* Style for the unordered list within the navbar */
+    .navbar-links ul {
+    display: flex;
+    margin: 4rem  0rem;
+    
+    }
+
+    /* Style for the line separator */
+   .separator {
+    width: 95%; /* Adjust the width as needed */
+    height: 0.5px; /* Adjust the height as needed */
+    background-color: #aeaeae; /* Adjust the color as needed */
+    margin-top: 5px ; /* Adjust the margin as needed */
+    margin-left: 15px;
+
+
+  }
+
+    /* Display the navbar links when the navbar is active */
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Set a background color and font styles */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Style the main element with a transition */
+main {
+    padding: 0px;
+}
+
+
+.container-21x9 {
+    width: 100%;
+    padding-top: 42.8571%; /* (9 / 21) * 100% */
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 1.5rem; /* Add margin to create space between containers */
+}
+
+/* Style the content within the container */
+.container-21x9-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow if the image is larger than the container */
+}
+
+/* Style the images */
+.container-21x9-content img {
+    cursor: pointer;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image cover the container while maintaining aspect ratio */
+}
+
+/* Style the intro video section */
+#intro-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set the height to cover the entire viewport */
+    overflow: hidden;
+}
+
+/* Style the video to cover the entire section */
+#intro-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* Footer styles */
+footer {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    background-color: #ebebeb;
+  }
+  
+  .box {
+    width: 90%;
+    height: 30%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .line {
+    width: 100%;
+    height: 0.1px;
+    background-color: #8f8f8f;
+    position: absolute;
+    bottom: 51%;
+  }
+  
+  .content {
+    margin-left: 0;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer a {
+    color: #3f3f3f; /* Link color */
+    text-decoration: none; /* Remove underlines from links */
+    font-size: 16px; /* Font size for the link */
+    margin-right: 20px; /* Add some spacing between the link and copyright text */
+}
+
+/* Style the copyright text */
+footer .copyright {
+    color: #aeaeae;
+}
+  

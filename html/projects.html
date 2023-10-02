@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mahd Jahfel | Lextoor</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="icon" type="image/x-icon" href="../favIcon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand-title"><a href="../index.html"><img src="../imgs/logo.png" alt="logo"></div></a>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <div class="separator"></div>
+                    <li><a href="#">Projects</a></li>
+                    <div class="separator"></div>
+                    <li><a href="../html/about.html">About</a></li>
+                    <div class="separator"></div>
+                    <li><a href="mailto:mahdjahfel@gmail.com">Contact</a></li>
+                    <div class="separator"></div>
+                </ul>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+        <section id="section1" class="container-21x9">
+            <div class="container-21x9-content">
+                <!-- Add a video element without default controls -->
+                <video poster="../imgs/thumbnail.jpg" preload="metadata" id="videoPlayer">
+                    <source src="../videos/Finale.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Add a custom play button overlay -->
+                <div class="play-button-overlay" onclick="playVideo()">
+                    <img src="../imgs/play-button-02-01.png" alt="Play Video">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Repeat this section for Sections 2 to 9 -->
+        <section id="section2" class="container-21x9">
+            <div class="container-21x9-content">
+                <img src="../imgs/photo1.jpg" alt="Image 2">
+            </div>
+        </section>
+        <section id="section3" class="container-21x9">
+            <div class="container-21x9-content">
+                <img src="../imgs/img3.jpg" alt="Image 3">
+            </div>
+        </section>
+        <section id="section4" class="container-21x9">
+            <div class="container-21x9-content">
+                <img src="../imgs/photo2.jpg" alt="Image 4">
+            </div>
+        </section>
+        <section id="section5" class="container-21x9">
+            <div class="container-21x9-content">
+                <img src="../imgs/photo3.jpg" alt="Image 5">
+            </div>
+    </main>
+
+    <footer>
+        <div class="box">
+          <div class="line"></div>
+          <div class="content">
+            <a href="mailto:your-email@gmail.com">Contact me</a>
+            <p class="copyright">
+              &copy; 2023 Mahd Jahfel. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    
+    
+
+    <script>
+        var video = document.getElementById('videoPlayer');
+        var playButtonOverlay = document.querySelector('.play-button-overlay');
+    
+        function toggleVideo() {
+            if (video.paused || video.ended) {
+                video.play();
+                playButtonOverlay.style.display = 'none';
+            } else {
+                video.pause();
+                playButtonOverlay.style.display = 'flex';
+            }
+        }
+    
+        video.addEventListener('click', toggleVideo);
+        playButtonOverlay.addEventListener('click', toggleVideo);
+
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+}) 
+
+
+    </script>
+    
+</body>
+</html>
